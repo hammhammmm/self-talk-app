@@ -5,11 +5,11 @@ export interface Question {
 }
 
 export enum Category {
-  SELF_AWARENESS = "self-awareness",
-  SELF_ACCEPTANACE = "self-acceptance",
-  SELF_CARE = "self-care",
-  SELF_LOVE = "self-love",
-  PURPOSE_AND_MEANING = "purpose-and-meaning",
+  SELF_AWARENESS = "self awareness",
+  SELF_ACCEPTANACE = "self acceptance",
+  SELF_CARE = "self care",
+  SELF_LOVE = "self love",
+  PURPOSE_AND_MEANING = "purpose & meaning",
 }
 
 export const questions: Question[] = [
