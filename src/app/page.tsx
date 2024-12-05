@@ -39,9 +39,10 @@ export default function Home() {
                 onOpen();
                 setSelected(randomQuestions[k]);
               }}
-              className="card"
+              className="card relative"
               style={{ "--i": q } as React.CSSProperties}
             >
+              <div className="bg-transparent w-[250px] h-[363px] absolute top-0 left-0"></div>
               <img src="./images/cards/1.png" alt="" />
             </button>
           );
@@ -77,7 +78,7 @@ export default function Home() {
           },
         }}
       >
-        <ModalContent className="items-center justify-center w-[500px] h-[726px] relative ">
+        <ModalContent className="items-center justify-center w-[500px] h-[626px] relative ">
           {(onClose) => (
             <>
                <div className="bg-white">
@@ -89,11 +90,11 @@ export default function Home() {
                         height={100}
                         alt=""
                       />
-                      <p className="text-[#fff] capitalize text-2xl bg-[#2E2C2B]  -ml-4 rounded-2xl px-8 py-1">
+                      <p className="text-[#fff] capitalize text-lg bg-[#2E2C2B]  -ml-4 rounded-2xl px-8 py-1">
                         {selected?.category}
                       </p>
                     </ModalHeader>
-                    <ModalBody className="h-[680px]">
+                    <ModalBody className="h-[580px]">
                       <div className="flex flex-col gap-8 justify-center items-center p-4 text-black border-2 border-[#2E2C2B] h-full rounded-lg relative">
                         <p className="text-4xl text-center leading-[3rem] tracking-wide">
                           {selected?.title}
@@ -114,18 +115,7 @@ export default function Home() {
           )}
         </ModalContent>
       </Modal>
-      <div className="absolute bottom-0 w-full bg-black/20 p-4">
-        <div className="flex gap-2 items-center justify-center opacity-30">
-          <p className=" capitalize text-center">self talk </p>
-          <Link
-            href={
-              "https://www.tiktok.com/@hamm.hammmm?is_from_webapp=1&sender_device=pc"
-            }
-          >
-            by hamm.hammmm
-          </Link>
-        </div>
-      </div>
+
     </>
   );
 }

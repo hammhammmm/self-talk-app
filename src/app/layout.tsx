@@ -1,11 +1,12 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Sriracha } from 'next/font/google'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Sriracha } from "next/font/google";
+import Link from "next/link";
 
 const sriracha = Sriracha({
-  weight: '400',
-  subsets: ["thai"]
-})
+  weight: "400",
+  subsets: ["thai"],
+});
 
 const title = `Self Talk | Everyday`;
 const description = "Self Talk | Everyday";
@@ -53,11 +54,29 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={sriracha.className}>{children}</body>
+      <meta
+        property="og:image"
+        content={`${process.env.NEXT_PUBLIC_URL}/images/cover.png`}
+      />
+      <body className={sriracha.className}>
+        <div>{children}</div>
+        <div className="absolute bottom-0 w-full bg-black/20 p-4">
+          <div className="flex gap-2 items-center justify-center opacity-30">
+            <p className=" capitalize text-center">self talk </p>
+            <Link
+              href={
+                "https://www.tiktok.com/@hamm.hammmm?is_from_webapp=1&sender_device=pc"
+              }
+            >
+              by hamm.hammmm
+            </Link>
+          </div>
+        </div>
+      </body>
     </html>
-  )
+  );
 }
