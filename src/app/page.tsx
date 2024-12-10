@@ -97,7 +97,7 @@ export default function Home() {
                     <ModalBody className="h-[580px]">
                       <div className="flex flex-col gap-8 justify-center items-center p-4 text-black border-2 border-[#2E2C2B] h-full rounded-lg relative">
                         <p className="text-4xl text-center leading-[3rem] tracking-wide">
-                          {selected?.title}
+                          {selected?.guidance}
                         </p>
                       </div>
                       <div className="absolute bottom-8 flex justify-center  w-[90%] rounded-full  h-[48px]">
