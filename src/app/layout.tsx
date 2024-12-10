@@ -1,12 +1,8 @@
+import { Metadata } from "next";
 import "./globals.css";
-import type { Metadata } from "next";
-import { Sriracha,Mali } from "next/font/google";
-import Link from "next/link";
 
-const sriracha = Sriracha({
-  weight: "400",
-  subsets: ["thai"],
-});
+import { Mali } from "next/font/google";
+import Link from "next/link";
 
 const mali = Mali({
   weight: "300",
