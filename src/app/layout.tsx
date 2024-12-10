@@ -1,12 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Sriracha,Mali } from "next/font/google";
 import Link from "next/link";
 
-const sriracha = Sriracha({
-  weight: "400",
-  subsets: ["thai"],
-});
 
 const title = `Self Talk | Everyday`;
 const description = "Self Talk | Everyday";
@@ -62,7 +57,7 @@ export default function RootLayout({
         property="og:image"
         content={`${process.env.NEXT_PUBLIC_URL}/images/cover.png`}
       />
-      <body className={sriracha.className}>
+      <body>
         <div>{children}</div>
         <div className="absolute bottom-0 w-full bg-black/20 p-4">
           <div className="flex gap-2 items-center justify-center opacity-30">
